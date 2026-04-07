@@ -116,7 +116,11 @@ function t(key) {
 function worksPlural(n) {
   if (lang === 'en') return n === 1 ? t('works.1') : t('works.5');
   if (n === 1) return t('works.1');
-  if (n >= 2 && n <= 4) return t('works.24');
+  const lastDigit = n % 10;
+  const lastTwoDigits = n % 100;
+  if (lastDigit >= 2 && lastDigit <= 4 && (lastTwoDigits < 12 || lastTwoDigits > 14)) {
+    return t('works.24');
+  }
   return t('works.5');
 }
 
