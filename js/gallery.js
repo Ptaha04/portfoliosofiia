@@ -37,7 +37,7 @@ const STRINGS = {
     'services.tag': 'Zakres usług',
     'services.title': 'Co<br><em>robię</em>',
     'services.see': 'Zobacz prace',
-    's1.name': 'Ilustracja<br>& Characters',
+    's1.name': 'Ilustracja<br>& Postacie',
     's1.desc': 'Cyfrowe ilustracje, projekty postaci, rysunek ołówkiem i kolorowy — od szkicu po gotowy plik.',
     's2.name': 'Logo<br>& Branding',
     's2.desc': 'Logotypy, identyfikacja wizualna, plakaty i kompleksowy branding dla firm i projektów.',
@@ -195,8 +195,14 @@ function initNav() {
   const nav = $('.nav');
   const hamburger = $('.nav__hamburger');
   if (!hamburger) return;
-  hamburger.addEventListener('click', () => nav.classList.toggle('nav--open'));
-  $$('.nav__drawer a').forEach(a => a.addEventListener('click', () => nav.classList.remove('nav--open')));
+  hamburger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('nav--open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  });
+  $$('.nav__drawer a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('nav--open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
   window.addEventListener('scroll', () => {
     nav.classList.toggle('nav--scrolled', window.scrollY > 40);
   }, { passive: true });

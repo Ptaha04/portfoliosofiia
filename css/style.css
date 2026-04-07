@@ -236,7 +236,7 @@ ul { list-style: none; }
   transition: transform var(--dur-slow) var(--ease-out);
   z-index: 390;
 }
-.nav--open .nav__drawer { transform: translateY(0); }
+.nav--open + .nav__drawer { transform: translateY(0); }
 .nav__drawer a {
   font-family: var(--font-display);
   font-size: clamp(32px, 6vw, 56px);
