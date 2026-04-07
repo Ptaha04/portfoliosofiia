@@ -65,40 +65,68 @@
 
 <!-- ── HERO ─────────────────────────────────────────────── -->
 <section class="hero" aria-label="Introduction">
-  <div class="hero__left">
-    <p class="hero__eyebrow" data-i18n="hero.eyebrow">Graphic Designer — Poznań</p>
-
-    <h1 class="hero__name">Sofiia<br><em>Vorona</em></h1>
-
-    <p class="hero__role" data-i18n="hero.subtitle">Ilustracja · Branding · Animacja · 3D</p>
-
-    <p class="hero__desc" data-i18n="hero.desc">
-      Tworzę projekty, przez które można poczuć emocję, nastrój, charakter.
-      Łączę kreatywność z funkcjonalnością i klarowną komunikacją wizualną.
-    </p>
-
-    <div class="hero__cta">
-      <a href="#gallery-section" class="btn btn--primary" data-i18n="hero.cta1">Zobacz prace</a>
-      <a href="#contact"         class="btn btn--ghost"   data-i18n="hero.cta2">Kontakt</a>
-    </div>
+  <div class="hero__backdrop" aria-hidden="true">
+    <span class="hero__orb hero__orb--1"></span>
+    <span class="hero__orb hero__orb--2"></span>
+    <span class="hero__grid"></span>
   </div>
 
-  <!-- Hero photo (desktop) -->
-  <div class="hero__photo-wrap" aria-hidden="true">
-    <img class="hero__photo"
-         src="https://lh3.googleusercontent.com/d/1hk6yXWrETWXNme_RQ1Gi3QDQQRbZ-pwP"
-         alt="">
-  </div>
+  <div class="hero__content">
+    <div class="hero__left">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">Graphic Designer — Poznań</p>
 
-  <!-- Stats -->
-  <div class="hero__stats" aria-hidden="true">
-    <div>
-      <div class="hero__stat-number" id="heroCount">—</div>
-      <div class="hero__stat-label"  data-i18n="hero.works">Prac w portfolio</div>
+      <h1 class="hero__name">Sofiia<br><em>Vorona</em></h1>
+
+      <p class="hero__role" data-i18n="hero.subtitle">Ilustracja · Branding · Animacja · 3D</p>
+
+      <p class="hero__desc" data-i18n="hero.desc">
+        Tworzę projekty, przez które można poczuć emocję, nastrój, charakter.
+        Łączę kreatywność z funkcjonalnością i klarowną komunikacją wizualną.
+      </p>
+
+      <div class="hero__pills" aria-hidden="true">
+        <span class="hero__pill">Ilustracja</span>
+        <span class="hero__pill">Branding</span>
+        <span class="hero__pill">Motion</span>
+        <span class="hero__pill">3D</span>
+      </div>
+
+      <div class="hero__cta">
+        <a href="#gallery-section" class="btn btn--primary" data-i18n="hero.cta1">Zobacz prace</a>
+        <a href="#contact"         class="btn btn--ghost"   data-i18n="hero.cta2">Kontakt</a>
+      </div>
+
+      <div class="hero__stats" aria-hidden="true">
+        <div class="hero__stat-card">
+          <div class="hero__stat-number" id="heroCount">—</div>
+          <div class="hero__stat-label"  data-i18n="hero.works">Prac w portfolio</div>
+        </div>
+        <div class="hero__stat-card">
+          <div class="hero__stat-number" id="heroCats">—</div>
+          <div class="hero__stat-label"  data-i18n="hero.cats">Kategorii</div>
+        </div>
+      </div>
     </div>
-    <div>
-      <div class="hero__stat-number" id="heroCats">—</div>
-      <div class="hero__stat-label"  data-i18n="hero.cats">Kategorii</div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__frame">
+        <div class="hero__frame-ring"></div>
+        <div class="hero__photo-wrap">
+          <img class="hero__photo"
+               src="https://lh3.googleusercontent.com/d/1hk6yXWrETWXNme_RQ1Gi3QDQQRbZ-pwP"
+               alt="">
+        </div>
+
+        <div class="hero__mini hero__mini--top">
+          <span class="hero__mini-label">Portfolio</span>
+          <strong class="hero__mini-value">Selected Works</strong>
+        </div>
+
+        <div class="hero__mini hero__mini--bottom">
+          <span class="hero__mini-label">Based In</span>
+          <strong class="hero__mini-value">Poznań · PL / UA / EN</strong>
+        </div>
+      </div>
     </div>
   </div>
 
